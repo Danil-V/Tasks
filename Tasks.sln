@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tasks.DAL", "Tasks.DAL\Tasks.DAL.csproj", "{0E65ADF2-4C1C-447B-868A-E4F96D12B187}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tasks.BLL", "Tasks.BLL\Tasks.BLL.csproj", "{783AEA60-F1DB-4A7B-9135-36BF61B03ECB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tasks.Web", "Tasks.Web\Tasks.Web.csproj", "{B543C0E6-3892-4D5D-AD0A-E911BFAC5272}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0E65ADF2-4C1C-447B-868A-E4F96D12B187}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E65ADF2-4C1C-447B-868A-E4F96D12B187}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E65ADF2-4C1C-447B-868A-E4F96D12B187}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E65ADF2-4C1C-447B-868A-E4F96D12B187}.Release|Any CPU.Build.0 = Release|Any CPU
+		{783AEA60-F1DB-4A7B-9135-36BF61B03ECB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{783AEA60-F1DB-4A7B-9135-36BF61B03ECB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{783AEA60-F1DB-4A7B-9135-36BF61B03ECB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{783AEA60-F1DB-4A7B-9135-36BF61B03ECB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B543C0E6-3892-4D5D-AD0A-E911BFAC5272}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B543C0E6-3892-4D5D-AD0A-E911BFAC5272}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B543C0E6-3892-4D5D-AD0A-E911BFAC5272}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B543C0E6-3892-4D5D-AD0A-E911BFAC5272}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {84A7C599-1076-4D55-BCA1-EE55D00614DD}
+	EndGlobalSection
+EndGlobal

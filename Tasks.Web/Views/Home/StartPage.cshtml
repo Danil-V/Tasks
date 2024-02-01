@@ -1,0 +1,71 @@
+﻿@model IEnumerable<Tasks.BLL.DTO.TaskDTO>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var taskStatus = string.Empty;
+
+}
+
+<div>
+    <table class ="myTable">
+        <caption><b>Задачи</b></caption>
+        <thead>
+            <tr>
+                <th>
+                    <p style="text-align:left"> <a asp-action="CreateTask" asp-controller="Task">Добавить задачу</a> </p>
+                </th> 
+                <th>
+                    <form asp-action="StartPage" asp-controller="Home" asp-anti-forgery="true">
+                        <div style="text-align: left">
+                            <label for="">Выберите нужный статус:</label>
+                            <select id="StatusId" name="StatusId">
+                                <option value=""></option>
+                                <option value="1">Создана</option>
+                                <option value="2">В работе</option>
+                                <option value="3">Завершена</option>
+                            </select>
+                            <input type="submit" value="Применить фильтр" formmethod="post" />
+                        </div>
+                    </form>
+                </th>
+            <tr>
+        </thead>
+    </table>    
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Задача</th>
+                <th>Описание</th>
+                <th>Статус</th>
+                <th>Действие</th>
+        </tr>
+        </thead>
+        <tbody>
+        @{
+            foreach (var item in Model.Reverse())
+            {
+                <tr>
+                    <td style="text-align:left">@Html.DisplayFor(modelItem => item.Name)</td>
+                        <td style="text-align:left"> @Html.DisplayFor(modelItem => item.Description) </td>
+                    <td class="centre">
+                        @{
+                            if (item.StatusId == 1)
+                                taskStatus = "Создана";
+                            if (item.StatusId == 2)
+                                taskStatus = "В работе";
+                            if (item.StatusId == 3)
+                                taskStatus = "Завершена";
+                         }
+                         @Html.DisplayFor(modelItem => taskStatus)
+                    </td>
+                    <td>
+                        <p>@Html.ActionLink("Редактировать", "UpdateTask", "Task", new { Id = item.Id }, FormMethod.Get)</p>
+                        <p>@Html.ActionLink("Удалить", "DeleteTask", "Task", new { Id = item.Id }, FormMethod.Get)</p>
+                    </td>
+                </tr>
+            }
+        }
+        </tbody>
+    </table>
+
+</div>

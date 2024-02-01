@@ -1,0 +1,55 @@
+﻿@using Tasks.Web.Models;
+@model TaskViewModel
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Task";
+}
+
+<div class="page">
+    <form asp-action="UpdateTask" asp-controller="Task" asp-anti-forgery="true">
+        <div class="validation" asp-validation-summary="ModelOnly"></div>
+        <div>
+            <h3 style="text-align:center">Изменение задачи:</h3>
+            <table>
+                <tr>
+                    <td style="text-align:right">Задача:</td>
+                    <td style="text-align:left">@Model.Name;</td>
+                </tr>
+                <tr>
+                    <td style="text-align:right"> <label asp-for="Id">Уникальный индикатор:</label> </td>
+                    <td style="text-align:left"> <input asp-for="Id" readonly="readonly" class="resizedTextbox" /></td>
+                    <span asp-validation-for="Id" />
+                </tr>
+                <tr>
+                    <td style="" text-align:right"> <label asp-for="Name">Укажите новое название:</label> </td>
+                    <td style="text-align:left"> <input asp-for="Name" class="resizedTextbox" /></td>
+                    <span asp-validation-for="Name" />
+                </tr>
+                <tr>
+                    <td style="text-align:right"> <label asp-for="Description">Добавьте описание:</label> </td>
+                    <td style="text-align:left"> <input asp-for="Description" class="resizedTextbox" /></td>
+                    <span asp-validation-for="Description" />
+                </tr>
+                <tr>
+                    <td style="text-align:right"> <label asp-for="Status">Укажите статус:</label> </td>
+                    <td style="text-align:left">
+                        <select id="Status" name="Status">
+                            <option value=""></option>
+                            <option value="Создана">Создана</option>
+                            <option value="В работе">В работе</option>
+                            <option value="Завершена">Завершена</option>
+                        </select>
+                    </td>
+                    <span asp-validation-for="Status" />
+                </tr>
+            </table>
+            <p>
+                <div>
+                    <input type="submit" value="Обновить задачу" />
+                </div>
+            </p>
+            <p style="text-align:center"> <a asp-action="StartPage" asp-controller="Home">Вернуться к списку задач</a> </p>
+        </div>
+    </form>
+</div>
