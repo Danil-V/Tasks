@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using System.Threading.Tasks;
 using Tasks.DAL.Data.EF;
 using Tasks.DAL.Data.Models;
 using Tasks.DAL.Interfaces;
@@ -30,7 +31,9 @@ namespace Tasks.DAL.Repository
         }
 
         public async Task UpdateAsync(StatusTask status) {
-            _db.Update(status);
+            StatusTask statusTask = _db.Statuses.FirstOrDefault(x => x.Id == status.Id);
+            statusTask.Name = status.Name;
+            _db.Update(statusTask);
         }
 
         public async Task DeleteAsync(int id) {

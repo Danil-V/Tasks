@@ -62,6 +62,7 @@ namespace Tasks.BLL.Services
             var status = await unitOfWork.Statuses.GetAsync(viewTaskDTO.Status);
             var task = await unitOfWork.Tasks.GetAsync(viewTaskDTO.Id.ToString());
             var updateTask = new UserTask {
+                Id = task.Id,
                 Name = viewTaskDTO.Name,
                 Description = viewTaskDTO.Description,
                 Date = task.Date,

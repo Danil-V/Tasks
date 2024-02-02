@@ -30,10 +30,16 @@ namespace Tasks.DAL.Repository
         }
 
         public async Task UpdateAsync(UserTask task) {
-            _db.Update(task);
+            UserTask userTask = _db.Tasks.FirstOrDefault(x => x.Id == task.Id);
+            userTask.Name = task.Name;
+            userTask.Description = task.Description;
+            userTask.Date = task.Date;
+            userTask.StatusId = task.StatusId;
+            _db.Update(userTask);
         }
 
         public async Task DeleteAsync(int id) {
+            
             var task = await _db.Tasks.FirstOrDefaultAsync(x => x.Id == id);
             if (task != null)
                 _db.Tasks.Remove(task);
