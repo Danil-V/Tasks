@@ -1,7 +1,7 @@
 ﻿var SelectedRow = "";
 
 function highlight(row) {
-    SelectedRow = row.cells[0].textContent;
+    SelectedRow = "Задача:" + row.cells[0].textContent + "\n" + "Описание задачи:" + row.cells[1].textContent;
     deHighlight();
     row.style.backgroundColor = '#d5dec8';
     row.classList.toggle("selectedRow");

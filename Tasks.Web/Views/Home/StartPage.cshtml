@@ -31,7 +31,7 @@
         </tr>
     </table>
 
-    <table class="table">
+    <table id="mytable" class="table">
         <thead>
             <tr>
                 <th>Задача</th>
@@ -44,7 +44,7 @@
         @{
             foreach (var item in Model.Reverse())
             {
-                <tr>
+                <tr onclick="highlight(this);">
                     <td style="text-align:left">@Html.DisplayFor(modelItem => item.Name)</td>
                         <td style="text-align:left"> @Html.DisplayFor(modelItem => item.Description) </td>
                     <td class="centre">
