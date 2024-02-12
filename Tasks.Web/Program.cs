@@ -7,7 +7,7 @@ namespace Tasks.Web
         static void Main(string[] args) {
             try {
                 var builder = WebApplication.CreateBuilder(args);
-                var connection = builder.Configuration.GetConnectionString("DefaultConnection");
+                var connection = "Data Source = D:\\Documents\\CSharp\\Projects\\Tasks\\Tasks.DAL\\Tasks.db";
 
                 // Add services to the container.
                 builder.Services.AddControllersWithViews();

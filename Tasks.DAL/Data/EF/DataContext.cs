@@ -7,13 +7,7 @@ namespace Tasks.DAL.Data.EF
         public DbSet<UserTask>? Tasks => Set<UserTask>();
         public DbSet<StatusTask>? Statuses => Set<StatusTask>();
 
-        public DataContext(DbContextOptions<DataContext> options) : base(options) {
-            try {
-                bool isCreated = Database.EnsureCreated();
-            }
-            catch (Exception ex) { 
-                Console.WriteLine(ex); }
-        }
+        public DataContext(DbContextOptions<DataContext> options) : base(options) { }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder) {
             StatusTask taskCreated = new StatusTask { Id = 1, Name = "Создана" };
