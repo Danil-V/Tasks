@@ -1,8 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System.Threading.Tasks;
-using Tasks.DAL.Data.EF;
-using Tasks.DAL.Data.Models;
 using Tasks.DAL.Interfaces;
+using Tasks.DAL.Data.Entity;
+using Tasks.DAL.Data.Models;
 
 namespace Tasks.DAL.Repository
 {

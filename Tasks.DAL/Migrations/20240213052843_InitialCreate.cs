@@ -61,7 +61,7 @@ namespace Tasks.DAL.Migrations
             migrationBuilder.InsertData(
                 table: "Tasks",
                 columns: new[] { "Id", "Date", "Description", "Name", "StatusId" },
-                values: new object[] { 1, new DateTime(2024, 2, 12, 14, 50, 26, 468, DateTimeKind.Local).AddTicks(1316), "May the force be with you", "Моя первая задача", 2 });
+                values: new object[] { 1, new DateTime(2024, 2, 13, 8, 28, 42, 962, DateTimeKind.Local).AddTicks(3698), "May the force be with you", "Моя первая задача", 2 });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Tasks_StatusId",

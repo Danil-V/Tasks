@@ -3,12 +3,10 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 
 
-namespace Tasks.DAL.Data.EF
+namespace Tasks.DAL.Data.Entity
 {
-    public class SampleContextFactory : IDesignTimeDbContextFactory<DataContext>
-    {
-        public DataContext CreateDbContext(string[] args)
-        {
+    public class SampleContextFactory : IDesignTimeDbContextFactory<DataContext> {
+        public DataContext CreateDbContext(string[] args) {
             var optionsBuilder = new DbContextOptionsBuilder<DataContext>();
 
             // получаем конфигурацию из файла appsettings.json

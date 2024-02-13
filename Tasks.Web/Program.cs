@@ -1,13 +1,13 @@
 using Microsoft.EntityFrameworkCore;
-using Tasks.DAL.Data.EF;
+using Tasks.DAL.Data.Entity;
 
 namespace Tasks.Web
 {
     class Program {
-        static void Main(string[] args) {
+        static async Task Main(string[] args) {
             try {
                 var builder = WebApplication.CreateBuilder(args);
-                var connection = "Data Source = D:\\Documents\\CSharp\\Projects\\Tasks\\Tasks.DAL\\Tasks.db";
+                var connection = "Data Source = D:\\Database\\Tasks.db";
 
                 // Add services to the container.
                 builder.Services.AddControllersWithViews();

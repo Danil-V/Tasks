@@ -1,6 +1,7 @@
 ﻿namespace Tasks.DAL.Data.Models
 {
-    public class UserTask {
+    public class UserTask
+    {
         public int Id { get; set; }
         public string? Name { get; set; }
         public string? Description { get; set; }

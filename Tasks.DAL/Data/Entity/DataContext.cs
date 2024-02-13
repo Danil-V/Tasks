@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Tasks.DAL.Data.Models;
 
-namespace Tasks.DAL.Data.EF
+namespace Tasks.DAL.Data.Entity
 {
     public class DataContext : DbContext {
         public DbSet<UserTask>? Tasks => Set<UserTask>();

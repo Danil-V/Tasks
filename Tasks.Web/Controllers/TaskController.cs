@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Tasks.BLL.DTO;
 using Tasks.BLL.Services;
-using Tasks.DAL.Data.EF;
+using Tasks.DAL.Data.Entity;
 using Tasks.Web.Models;
 
 namespace Tasks.Web.Controllers

@@ -4,14 +4,14 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Tasks.DAL.Data.EF;
+using Tasks.DAL.Data.Entity;
 
 #nullable disable
 
 namespace Tasks.DAL.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20240212115027_InitialCreate")]
+    [Migration("20240213052843_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -79,7 +79,7 @@ namespace Tasks.DAL.Migrations
                         new
                         {
                             Id = 1,
-                            Date = new DateTime(2024, 2, 12, 14, 50, 26, 468, DateTimeKind.Local).AddTicks(1316),
+                            Date = new DateTime(2024, 2, 13, 8, 28, 42, 962, DateTimeKind.Local).AddTicks(3698),
                             Description = "May the force be with you",
                             Name = "Моя первая задача",
                             StatusId = 2

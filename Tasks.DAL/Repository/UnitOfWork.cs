@@ -1,6 +1,6 @@
-﻿using Tasks.DAL.Data.EF;
+﻿using Tasks.DAL.Interfaces;
+using Tasks.DAL.Data.Entity;
 using Tasks.DAL.Data.Models;
-using Tasks.DAL.Interfaces;
 
 namespace Tasks.DAL.Repository
 {

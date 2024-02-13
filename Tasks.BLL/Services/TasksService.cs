@@ -1,9 +1,9 @@
 ﻿using AutoMapper;
 using Tasks.BLL.DTO;
 using Tasks.BLL.Interfaces;
-using Tasks.DAL.Data.EF;
-using Tasks.DAL.Data.Models;
 using Tasks.DAL.Repository;
+using Tasks.DAL.Data.Entity;
+using Tasks.DAL.Data.Models;
 
 namespace Tasks.BLL.Services
 {

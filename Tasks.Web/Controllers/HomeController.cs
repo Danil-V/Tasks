@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Tasks.BLL.Services;
-using Tasks.DAL.Data.EF;
-using static System.Runtime.InteropServices.JavaScript.JSType;
+using Tasks.DAL.Data.Entity;
 
 
 namespace Tasks.Web.Controllers
